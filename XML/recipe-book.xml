@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="../XSL/recipe-book.xsl"?>
+
+<!--
+    Hemos usado el IDE Netbeans para la validación. Para ello
+    creamos un proyecto de HTML (creo que vale cualquiera) y 
+    creamos el fichero XML a validar y el XSD. Y para validar
+    usando ese XSD local seguimos los pasos en:
+    https://stackoverflow.com/questions/3579413/netbeans-how-to-provide-offline-xml-schemas
+    
+    1. Select the 'DTDs and XML Schemas' item from the Tools menu.
+    A dialog box will open.
+
+    2. Scroll through the list on the left until the item 'User catalog [read-write] is visible.
+    Select that item.
+
+    3. Press the button titled 'Add Local DTD or Schema...'
+-->
+
+<!-- Libro de recetas -->
+<recipe-book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://www.practicasipc.edu"
+             xsi:schemaLocation="http://www.practicasipc.edu ../XSD/schema.xsd">
+    <!-- Course significa tipo de plato (primero, segundo o postre)-->
+    <!-- Las unidades de "duration" son segundos -->
+    <recipe name="Tarta de gofio y bienmesabe" author="Ángel" duration="5400" difficulty="difícil" number-of-people="6" course="postre">
+        
+        <!-- Foto principal de cada receta -->
+        <photo src="https://img-global.cpcdn.com/002_recipes/9386e4aca812db89/640x640sq70/photo.jpg" alt="Imagen del resultado" />
+
+        <!-- Lista de ingredientes para cada receta -->
+        <ingredient-list>
+            <ingredient name="Gofio" quantity="600" unit="gr" />
+            <ingredient name="Levadura" quantity="17" unit="gr" />
+            <ingredient name="Bicarbonato" quantity="0.25" unit="cucharadita" />
+            <ingredient name="Huevos M" quantity="3" unit="unidades" />
+            <ingredient name="Azúcar" quantity="500" unit="gr" />
+            <ingredient name="Aceite de girasol" quantity="300" unit="ml" />
+            <ingredient name="Leche semidesnatada" quantity="360" unit="ml" />
+            <ingredient name="Nata vegetal" quantity="250" unit="ml" />
+            <ingredient name="Esencia de vainilla" quantity="1" unit="unidad" />
+            <ingredient name="Bienmesabe" quantity="1" unit="unidad" />
+            <ingredient name="Dulce de leche" quantity="100" unit="ml" />
+        </ingredient-list>
+
+        <!-- Lista de instrucciones para cada receta -->
+        <instruction-list>
+            <instruction number="2">
+                Ahora bajamos la velocidad de la batidora 
+                y tamizamos sobre nuestra mezcla la 
+                harina el gofio la sal la levadura y el bicarbonato.
+                Integramos con la pala de la batidora.
+            </instruction>
+            <instruction number="1">
+                Comenzamos preparando el bizcocho para ello
+                blanqueamos en la batidora los huevos junto con el azúcar,
+                seguidamente añadimos el aceite y la leche.
+            </instruction>
+            <instruction number="3">
+                Engrasamos el molde y vertemos nuestra masa, 
+                establecemos la temperatura del horno a 175º
+                y lo dejamos durante una hora.
+            </instruction>
+            <instruction number="4">
+                Una vez listo el bizcocho, dejamos enfriar 
+                unos 10 minutos y desmoldamos.
+            </instruction>
+            <instruction number="5">
+                Preparamos mousse de bienmesabe:
+                semimontamos la nata junto, añadimos azúcar al gusto,
+                vertemos la esencia de vainilla y mezclamos haciendo 
+                movimientos envolventes con nuestro bienmesabe.
+            </instruction>
+            <instruction number="6">
+                Nivelamos y cortamos el bizcocho con el mousse, 
+                seguidamente añadimos un poco de dulce de leche 
+                para dar un toque a caramelo.
+            </instruction>
+            <instruction number="7">
+                Cubrimos y decoramos al gusto.
+            </instruction>
+        </instruction-list>
+
+    </recipe>
+    
+    <recipe name="Judias pintas canarias" author="Carlos" duration="6000" difficulty="media" number-of-people="4" course="primero">
+        
+        <photo src="https://img-global.cpcdn.com/002_recipes/2d9430e2c813adec/640x640sq70/photo.jpg" alt="Imagen del resultado" />
+        
+        <ingredient-list>
+            <ingredient name="Judías pintas" quantity="0.5" unit="kg" />
+            <ingredient name="Pimiento verde" quantity="1" unit="unidad" />
+            <ingredient name="Cebollas" quantity="2" unit="unidades" />
+            <ingredient name="Chorizo de fabada" quantity="1" unit="unidad" />
+            <ingredient name="Hoja de laurel seco" quantity="1" unit="unidad" />
+            <ingredient name="Hoja de laurel verde" quantity="1" unit="unidad" />
+            <ingredient name="Sal" quantity="2" unit="cucharadita" />
+            <ingredient name="Aceite" quantity="10" unit="ml" />
+        </ingredient-list>
+        
+        <instruction-list>
+            <instruction number="1">
+                Ponemos las judias de remojo en agua fría, durante 24 horas.
+            </instruction>
+            <instruction number="2">
+                Si vemos que las judías absorben toda el agua y se quedan al
+                descubierto, le añadimos mas, hasta que queden cubiertas de agua.
+            </instruction>
+            <instruction number="3">
+                Después de hidratarlas durante 24 horas, las escurrimos bien y las lavamos.
+            </instruction>
+            <instruction number="4">
+                Las ponemos en un caldero, le ponemos: 1 hoja de laurel seco, 1 cebolla mediana,
+                un chorizo de fabada, las cubrimos de agua, le añadimos la sal y las ponemos a 
+                guisar en un caldero durante 60 minutos. Siempre las vigilaremos por si se 
+                consume mucho el agua, para añadirle más.
+            </instruction>
+            <instruction number="5">
+                Cuando se hayan guisado, ponemos en otro caldero aceite y sofreímos la otra
+                cebolla y el pimiento verde. Cuando el sofrito a punto de hacerse, sacamos
+                el chorizo del caldero de las judías y lo picamos en tacos muy pequeños para
+                añadirlo al sofrito, esperamos 1 minuto más y añadimos el sofrito a la judías.
+                Dejamos cocinar a fuego medio durante 25 minutos más.
+            </instruction>
+            <instruction number="6">
+                A la hora de servir este fabuloso plato, añadiremos la hoja de laurel fresco.
+            </instruction>
+        </instruction-list>
+        
+    </recipe>
+    
+    <recipe name="Papas con costillas" author="Daute" duration="5400" difficulty="media" number-of-people="4" course="segundo">
+        
+        <photo src="https://img-global.cpcdn.com/002_recipes/2541445_345997a7e2174209/640x640sq70/photo.jpg" alt="Imagen del resultado" />
+        
+        <ingredient-list>
+            <ingredient name="Costillas de cerdo saladas" quantity="1" unit="kg" />
+            <ingredient name="Papas" quantity="500" unit="gr" />
+            <ingredient name="Piñas" quantity="3" unit="unidades" />
+            <ingredient name="Manojo de cilantro" quantity="1" unit="unidad" />
+            <ingredient name="Pimiento verde" quantity="0.5" unit="unidad" />
+            <ingredient name="Comino en grano" quantity="1" unit="cucharadita" />
+            <ingredient name="Sal gruesa" quantity="1" unit="cucharadita" />
+            <ingredient name="Pimienta picona" quantity="0.5" unit="unidad" />
+            <ingredient name="Dientes de ajo" quantity="5" unit="unidades" />
+            <ingredient name="Vinagre blanco" quantity="2" unit="cucharadita" />
+            <ingredient name="Aceite de oliva" quantity="4" unit="cucharadita" />
+        </ingredient-list>
+        
+        <instruction-list>
+            <instruction number="1">
+                Poner las costillas en remojo durante varias horas e ir cambiando el
+                agua.
+            </instruction>
+            <instruction number="2">
+                Guisar las costillas durante 40 minutos en un caldero añadiendo un poco
+                de sal y un trozo de limon. Si durante la coccción va subiendo grasa 
+                habrá que espumarla. Mientras las costillas se guisan, se pueden ir
+                pelando las papas y partiendo las piñas al gusto. Una vez hecho esto 
+                habrá que dejarlas en una bandeja en agua.
+            </instruction>
+            <instruction number="3">
+                Pasar por el tercer brazo los ajos picados, el pimiento verde cortado en trozos,
+                la sal, el comino la pimienta picona y el manojo de cilantro lavado. Verter
+                el vinagre blanco y medio vaso pequeño de agua. Cuando esté todo ligado, echar
+                con cuidado el aceite y se bate unos minutos más, probando el nivel de sal.
+            </instruction>
+            <instruction number="4">
+                Apartamos las costillas y ponemos a guisar las papas y la piña durante
+                una media hora. No dejar que las papas se desmigajen.
+            </instruction>
+            <instruction number="5">
+                Preparar el contenido del plato y verter por encima el mojo al gusto.
+            </instruction>
+        </instruction-list>
+        
+    </recipe>
+    
+    <recipe name="Carne compuesta" author="Carlos" duration="2400" difficulty="media" number-of-people="4" course="segundo">
+        
+        <photo src="http://casiopea.tac7.es/portalfedac/documentos/carne-con-papas.jpg" alt="Imagen del resultado" />
+        
+        <ingredient-list>
+            <ingredient name="Carne de ternera en dados" quantity="1" unit="kg" />
+            <ingredient name="Cebolla" quantity="1" unit="unidad" />
+            <ingredient name="Tomate" quantity="1" unit="unidad" />
+            <ingredient name="Pimiento verde" quantity="1" unit="unidad" />
+            <ingredient name="Zanahoria" quantity="1" unit="unidad" />
+            <ingredient name="Papas" quantity="6" unit="unidades" />
+            <ingredient name="Dientes de ajo" quantity="3" unit="unidades" />
+            <ingredient name="Guisantes" quantity="150" unit="gr" />
+            <ingredient name="Vino blanco" quantity="3" unit="cucharadita" />
+            <ingredient name="Agua" quantity="200" unit="ml" />
+            <ingredient name="Tomillo" quantity="1" unit="cucharadita" />
+            <ingredient name="Pimenton" quantity="1" unit="cucharadita" />
+            <ingredient name="Hojas de laurel" quantity="3" unit="unidades" />
+        </ingredient-list>
+        
+        <instruction-list>
+            <instruction number="1">
+                A la carne ya cortada en dados se le pone sal, tomillo y pimienta al gusto. 
+                Se reserva mientras se preparan los otros ingredientes.
+            </instruction>
+            <instruction number="2">
+                Se pone aceite de oliva en una sartén y se pasa un poco la carne. 
+                Cuando haya tomado color, se aparta a otra olla.
+            </instruction>
+            <instruction number="3">
+                Se prepara el refrito en la misma sartén donde se hizo la carne.
+                Cebolla, ajos laminados, tomate y pimiento.
+            </instruction>
+            <instruction number="4">
+                Se añade a continuación, la zanahoria cortada y las hojas de laurel.
+            </instruction>
+            <instruction number="5">
+                Se incorpora el vino blanco y se deja evaporar. Seguidamente el agua.
+            </instruction>
+            <instruction number="6">
+                Si dispone de olla exprés guisar durante 15 minutos. 
+                En olla normal, hasta que la carne este tierna.
+            </instruction>
+            <instruction number="7">
+                Se incorpora la sal, el pimentón picante al gusto y los guisantes.
+                Dejarlo a fuego lento 4-5 minutos más.
+            </instruction>
+            <instruction number="8">
+                Aparte, se fríen las papas cortadas en dados y se les añade a la carne.
+                Dejar reposar.
+            </instruction>
+        </instruction-list>
+        
+    </recipe>
+    
+    <recipe name="Bombones canarios" author="Daute" duration="600" difficulty="fácil" number-of-people="1" course="postre">
+        
+        <photo src="https://img-global.cpcdn.com/002_recipes/b6c0c6c356d5f138/640x640sq70/photo.jpg" alt="Imagen del resultado" />
+        
+        <ingredient-list>
+            <ingredient name="Gofio" quantity="100" unit="gr" />
+            <ingredient name="Azúcar glass" quantity="12" unit="gr" />
+            <ingredient name="Almendras molidas" quantity="14" unit="gr" />
+            <ingredient name="Aceite de oliva" quantity="30" unit="ml" />
+            <ingredient name="Chocolate a la taza" quantity="30" unit="ml" />
+            <ingredient name="Agua" quantity="60" unit="ml" />
+            <ingredient name="Coco rallado" quantity="12" unit="gr" />
+        </ingredient-list>
+        
+        <instruction-list>
+            <instruction number="1">
+                En un bol mezclamos el gofio, las almendras, el azúcar, el chocolate y el aceite.
+            </instruction>
+            <instruction number="2">
+                Vamos añadiendo el agua poco a poco hasta obtener una masa homogénea.
+            </instruction>
+            <instruction number="3">
+                Formamos bolitas y las rebozamos en coco rallado.
+            </instruction>
+            <instruction number="4">
+                Reservamos y a comer.
+            </instruction>
+        </instruction-list>
+        
+    </recipe>
+    
+    <recipe name="Potas en salsa" author="Ángel" duration="3600" difficulty="fácil" number-of-people="4" course="primero">
+        
+        <photo src="https://img-global.cpcdn.com/002_recipes/7304fc0426543b16/640x640sq70/photo.jpg" alt="Imagen del resultado" />
+        
+        <ingredient-list>
+            <ingredient name="Potas" quantity="800" unit="gr" />
+            <ingredient name="Cebolla" quantity="2" unit="unidades" />
+            <ingredient name="Pimiento rojo" quantity="0.5" unit="unidad" />
+            <ingredient name="Dientes de ajo" quantity="3" unit="unidades" />
+            <ingredient name="Manojo de perejil" quantity="1" unit="unidad" />
+            <ingredient name="Manojo de cilantro" quantity="1" unit="unidad" />
+            <ingredient name="Aceite de oliva" quantity="4" unit="cucharadita" />
+            <ingredient name="Tomate triturado" quantity="500" unit="gr" />
+            <ingredient name="Vino blanco" quantity="200" unit="ml" />
+            <ingredient name="Sal" quantity="3" unit="cucharadita" />
+            <ingredient name="Hoja de laurel" quantity="1" unit="unidad" />
+            <ingredient name="Pimentón molido dulce" quantity="2" unit="cucharadita" />
+            <ingredient name="Comino" quantity="1" unit="cucharadita" />
+            <ingredient name="Cayena" quantity="1" unit="cucharadita" />
+        </ingredient-list>
+        
+        <instruction-list>
+            <instruction number="1">
+                Ponemos el ajo el perejil, el cilantro y el aceite en el caldero,
+                dejamos que se dore. Es mejor poner estos ingredientes molidos.
+            </instruction>
+            <instruction number="2">
+                Mientras, cortamos la cebolla en juliana y el pimiento en pedacitos.
+            </instruction>
+            <instruction number="3">
+                Añadimos la cebolla a la fritura y cuando esté pochadita añadimos el pimiento.
+            </instruction>
+            <instruction number="4">
+                Cuando esté, añadimos el tomate y dejamos que se fría un poco
+            </instruction>
+            <instruction number="5">
+                Añadimos el vino. Y dejamos guisar.
+            </instruction>
+            <instruction number="6">
+                Mientras cortamos las potas en cuadraditos y las añadimos al caldero.
+            </instruction>
+            <instruction number="7">
+                Añadimos las especias, el laurel, el comino, la cayena, el pimiento
+                molido y la sal mezclando todo bien.
+            </instruction>
+            <instruction number="8">
+                Cerramos la olla y en cuanto suba la presión bajamos el fuego a la
+                mitad y las cocinamos durate 10 minutos.
+            </instruction>
+            <instruction number="9">
+                Acompañar el plato al gusto, se recomienda acompañar con papas arrugadas
+                y gofio amasado.
+            </instruction>
+        </instruction-list>
+        
+    </recipe>
+</recipe-book>
+

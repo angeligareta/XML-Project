@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="http://www.practicasipc.edu"
+           xmlns="http://www.practicasipc.edu">
+
+    <!-- La herramienta usada para comprobar que el documento es válido es el IDE Netbeans -->
+
+    <!-- Ejemplo muy util de XSD https://stackoverflow.com/questions/14269541/xsd-restriction-on-attribute -->
+
+
+<!--~~~ Definición de tipos simpleType para los atributos con dominio restringido. ~~~-->
+
+    <!-- Definición del tipo difficulty -->
+    <xs:simpleType name="difficultyType">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="fácil" />
+            <xs:enumeration value="media" />
+            <xs:enumeration value="difícil" />
+        </xs:restriction>
+    </xs:simpleType> 
+    
+    <!-- Definición del tipo course -->
+    <xs:simpleType name="courseType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="primero" />
+            <xs:enumeration value="segundo" />
+            <xs:enumeration value="postre" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Definición del tipo unit -->
+    <xs:simpleType name="unitType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="l"  />
+            <xs:enumeration value="cl" />
+            <xs:enumeration value="ml" />
+            <xs:enumeration value="kg" />
+            <xs:enumeration value="gr"  />
+            <xs:enumeration value="mg" />
+            <xs:enumeration value="unidad" />
+            <xs:enumeration value="unidades" />
+            <xs:enumeration value="cucharadita" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+<!--~~~ Definición de tipos complexType para elementos ~~~-->
+    
+    <!-- Definición del tipo foto -->
+    <xs:complexType name="PhotoType">
+        <xs:attribute name="src" type="xs:anyURI" use="required"/>
+        <xs:attribute name="alt" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <!-- Definición del tipo ingrediente -->
+    <xs:complexType name="IngredientType">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="quantity" type="xs:double" use="required"/>
+        <xs:attribute name="unit" type="unitType" use="required"/>
+    </xs:complexType>
+    
+    <!-- Definición del tipo lista de ingredientes -->
+    <xs:complexType name="IngredientListType">
+        <xs:sequence>
+            <xs:element name="ingredient" type="IngredientType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Definición del tipo paso(step) -->
+    <!-- 
+        Estos elementos extras anidados son necesarios
+        para poder poner texto dentro de los elementos de este tipo
+     -->
+    <xs:complexType name="InstructionType">
+        <xs:simpleContent>
+          <xs:extension base="xs:string">
+            <xs:attribute name="number" type="xs:integer" use="required"/>
+          </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <!-- Definición del tipo instrucciones -->
+    <xs:complexType name="InstructionListType">
+        <xs:sequence>
+            <xs:element name="instruction" type="InstructionType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Definición del tipo receta -->
+    <xs:complexType name="RecipeType">
+        <!-- Elementos. Primero tienen que ir los elementos y luego los attributos -->
+        <xs:sequence>
+            <xs:element name="photo" type="PhotoType"/>
+            <xs:element name="ingredient-list" type="IngredientListType"/>
+            <xs:element name="instruction-list" type="InstructionListType"/>
+        </xs:sequence>
+        
+        <!-- Atributos -->
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="author" type="xs:string"/>
+        <xs:attribute name="duration" type="xs:integer" use="required"/> <!-- Las unidades son siempre segundos -->
+        <xs:attribute name="difficulty" type="difficultyType" use="required"/> <!-- Restricción cadenas específicas.-->
+        <xs:attribute name="number-of-people" type="xs:integer" use="required"/>
+        <xs:attribute name="course" type="courseType" use="required"/>
+    </xs:complexType>
+    
+    
+    <!--~~~ Definición del libro de recetas ~~~-->
+    <xs:element name="recipe-book">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="recipe" minOccurs="1" maxOccurs="unbounded" type="RecipeType" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

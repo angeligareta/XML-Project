@@ -1,4 +1,4 @@
-<h1 align="center">XML, XSD and XSL overview</h1>
+<h1 align="center">XML, XSD and XSLT overview</h1>
 <h4 align="center">Assignment for Human Computer Interaction course</h4>
 
 <p align="center">

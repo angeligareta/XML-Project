@@ -3,11 +3,11 @@
 
 <p align="center">
   <img alt="ULL" src="https://img.shields.io/badge/University-La%20Laguna-%2354048c?style=flat-square" />  
-  <img alt="License" src="https://img.shields.io/github/license/angeligareta/cheaper-travelling?style=flat-square" />
-  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/angeligareta/cheaper-travelling?style=flat-square" />
+  <img alt="License" src="https://img.shields.io/github/license/angeligareta/xml-xsd-xsl-overview?style=flat-square" />
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/angeligareta/xml-xsd-xsl-overview?style=flat-square" />
 </p>
 
-Basic assignment which aims to study the markup languages: XML, XSD and XSL, and develop a recipe book website.
+Basic assignment which aims to study the markup languages: XML, XSD and XSL, and develop a recipe book [website](https://angeligareta.com/xml-xsd-xsl-overview/).
 
 ## Compilation
 

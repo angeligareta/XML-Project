@@ -7,7 +7,7 @@
   <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/angeligareta/xml-xsd-xsl-overview?style=flat-square" />
 </p>
 
-Basic assignment which aims to study the markup languages: XML, XSD and XSL, and develop a recipe book [website](https://angeligareta.com/xml-xsd-xsl-overview/).
+Basic assignment which aims to study the markup languages: XML, XSD and XSLT, and develop a recipe book [website](https://angeligareta.com/xml-xsd-xsl-overview/).
 
 ## Compilation
 

@@ -11,7 +11,7 @@ Basic assignment which aims to study the markup languages: XML, XSD and XSL, and
 
 ## Compilation
 
-In order to compile, run the script 'process.sh', it will use a library called Saxon 9 stored in 'lib', get the xml schema from src/xml and start outputting the html as a result of the combination of XML, XSD and XSL.
+In order to compile, run the script [process.sh](process.sh), it will use a library called Saxon 9 stored in [lib](lib/), get the xml schema from src/xml and start outputting the html as a result of the combination of XML, XSD and XSL.
 
 ## Authors
 

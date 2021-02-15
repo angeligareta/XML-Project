@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?xml-stylesheet type="text/xsl" href="../XSL/recipe-book.xsl"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/recipe-book.xsl"?>
 
 <!--
     Hemos usado el IDE Netbeans para la validación. Para ello
@@ -21,7 +21,7 @@
 <!-- Libro de recetas -->
 <recipe-book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xmlns="http://www.practicasipc.edu"
-             xsi:schemaLocation="http://www.practicasipc.edu ../XSD/schema.xsd">
+             xsi:schemaLocation="http://www.practicasipc.edu ../xsd/schema.xsd">
     <!-- Course significa tipo de plato (primero, segundo o postre)-->
     <!-- Las unidades de "duration" son segundos -->
     <recipe name="Tarta de gofio y bienmesabe" author="Ángel" duration="5400" difficulty="difícil" number-of-people="6" course="postre">

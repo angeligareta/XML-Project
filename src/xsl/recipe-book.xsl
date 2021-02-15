@@ -10,8 +10,8 @@
     
 <xsl:output method="html" indent="yes"/>
 
-<xsl:variable name="DIR" select='"../HTML"' />
-<xsl:variable name="CSS_DIR" select='"../CSS/style.css"' />
+<xsl:variable name="DIR" select='"."' />
+<xsl:variable name="CSS_DIR" select='"./css/style.css"' />
 
 <!--Función para poner en mayúsculas las palabras pasadas, posible gracias a XSL 2.0 -->
 <xsl:function name="functx:capitalize-first"> <!-- Contiene Función de formateo de cadenas -->
@@ -234,7 +234,7 @@
                         </div>
                         
                         <div class="col-sm-4 align-center">
-                            <a href="../HTML/index.html">
+                            <a href="../index.html">
                                 <img id="home" src="https://png.icons8.com/material/2x/top-menu.png" alt="home" />
                             </a>
                         </div>
